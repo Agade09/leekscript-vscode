@@ -4,6 +4,7 @@
   "description": "Leekscript language support (leekwars.com)",
   "version": "0.1.0",
   "author": "Agade",
+  "publisher": "Agade",
   "repository": {
     "type": "git",
     "url": "git@github.com:Agade09/leekscript-vscode.git"
