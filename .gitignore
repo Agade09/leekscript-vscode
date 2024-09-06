@@ -1,2 +1,3 @@
 node_modules
 *.vsix
+tools/constants_highlighting.txt
