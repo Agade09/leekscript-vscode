@@ -20,6 +20,10 @@ Clone repository somewhere and within VSCode, ctrl+shift+p, "Developer: Install 
 
 ## Release Notes
 
+### 0.1.1
+
+Highlight extends, super, static, public, protected, private
+
 ### 0.1.0
 
 Initial release
