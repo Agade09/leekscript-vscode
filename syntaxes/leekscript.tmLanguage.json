@@ -6,6 +6,9 @@
 			"include": "#keywords"
 		},
 		{
+			"include": "#storage_type_modifiers"
+		},
+		{
 			"include": "#types"
 		},
 		{
@@ -34,7 +37,7 @@
 		"keywords": {
 			"patterns": [
 				{
-					"match": "\\b(if|else|while|for|return|break|case|continue|do|goto|import|instanceof|let|new|switch|throw|try|in)\\b",
+					"match": "\\b(if|else|while|for|return|break|case|continue|do|goto|import|instanceof|let|new|switch|throw|try|in|extends)\\b",
 					"name": "keyword.control"
 				},
 				{
@@ -57,13 +60,25 @@
 				{
 					"match": "\\b(null)\\b",
 					"name": "constant.language"
+				},
+				{
+					"match": "\\b(super)\\b",
+					"name": "keyword.super"
+				}
+			]
+		},
+		"storage_type_modifiers": {
+			"patterns": [
+				{
+					"match": "\\b(global|public|protected|private|static|final)\\b",
+					"name": "storage.modifier"
 				}
 			]
 		},
 		"types": {
 			"patterns": [
 				{
-					"match": "\\b((?:integer|real|number|boolean|var|any|string|global|void)(?:\\<[^\\>]+\\>)?|Array|Map|Set)\\b",
+					"match": "\\b((?:integer|real|number|boolean|var|any|string|void)(?:\\<[^\\>]+\\>)?|Array|Map|Set)\\b",
 					"name": "storage.type"
 				}
 			]
