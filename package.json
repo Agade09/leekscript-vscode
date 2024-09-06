@@ -1,0 +1,26 @@
+{
+  "name": "leekscript-vscode",
+  "displayName": "Leekscript",
+  "description": "Leekscript language support (leekwars.com)",
+  "version": "0.1.0",
+  "author": "Agade",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "leekscript",
+      "aliases": ["Leekscript", "leekscript"],
+      "extensions": ["leek"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "leekscript",
+      "scopeName": "source.leekscript",
+      "path": "./syntaxes/leekscript.tmLanguage.json"
+    }]
+  }
+}
