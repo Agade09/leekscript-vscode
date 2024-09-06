@@ -2,7 +2,7 @@
   "name": "leekscript-vscode",
   "displayName": "Leekscript V4",
   "description": "Leekscript language support (leekwars.com)",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Agade",
   "publisher": "Agade",
   "repository": {
