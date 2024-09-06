@@ -4,6 +4,7 @@
   "description": "Leekscript language support (leekwars.com)",
   "version": "0.1.0",
   "author": "Agade",
+  "homepage": "https://github.com/Agade09/leekscript-vscode",
   "engines": {
     "vscode": "^1.93.0"
   },
