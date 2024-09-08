@@ -1,21 +1,20 @@
-import re
+import json
 import requests
 
-Constants_URL = "https://raw.githubusercontent.com/leek-wars/leek-wars/0580d239bc162111ae460198a2e3eed3cc2c4db6/src/model/constants.ts"
+Constants_URL = "https://leekwars.com/api/constant/get-all"
 
 def fetch_constants():
     """
     Fetches the Leek Wars constants from the given URL.
     """
     response = requests.get(Constants_URL)
-    return response.text
+    return response.json()
 
-def extract_constants(constants_text):
+def extract_constants(constants):
     """
-    Extracts the Leek Wars constants from the given text.
+    Extracts the Leek Wars constants from the given data.
     """
-    pattern = r'name: \'([A-Z_a-z0-9]+)\''
-    return re.findall(pattern, constants_text)
+    return [constant["name"] for constant in constants["constants"]]
 
 def write_constants_to_file(constants, filename):
     """
@@ -25,9 +24,10 @@ def write_constants_to_file(constants, filename):
         file.write("|".join(constants))
 
 def main():
-    constants_text = fetch_constants()
-    constants = extract_constants(constants_text)
-    write_constants_to_file(constants, "constants_highlighting.txt")
+    constants = fetch_constants()
+    constants_names = extract_constants(constants)
+    print(f"Found {len(constants_names)} constants")
+    write_constants_to_file(constants_names, "constants_highlighting.txt")
 
 if __name__ == "__main__":
     main()
