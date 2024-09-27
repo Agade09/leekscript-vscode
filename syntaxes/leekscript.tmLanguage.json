@@ -78,7 +78,7 @@
 		"types": {
 			"patterns": [
 				{
-					"match": "\\b((?:integer|real|number|boolean|var|any|string|void)(?:\\<[^\\>]+\\>)?|Array|Map|Set)\\b",
+					"match": "\\b((?:integer|real|number|boolean|var|any|string|void)(?:\\<[^\\>]+\\>)?|Array|Map|Set|Function)\\b",
 					"name": "storage.type"
 				}
 			]
